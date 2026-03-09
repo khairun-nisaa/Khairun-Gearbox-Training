@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    color: #e0e0e0;
+    background: #ffffff;
+    color: #222;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,20 +16,29 @@ body {
 /* Header */
 header {
     text-align: center;
-    padding: 2.5rem 1rem 1.5rem;
+    padding: 3rem 1rem 1.5rem;
+    border-bottom: 1px solid #eee;
 }
 
 header h1 {
-    font-size: 2.4rem;
-    color: #e94560;
-    letter-spacing: 1px;
+    font-size: 2rem;
+    color: #111;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .subtitle {
-    margin-top: 0.4rem;
-    font-size: 1.1rem;
-    color: #a8a8b3;
-    font-style: italic;
+    margin-top: 0.3rem;
+    font-size: 0.95rem;
+    color: #888;
+}
+
+.author {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 /* Main content */
@@ -38,14 +47,14 @@ main {
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
-    padding: 1rem 1.5rem 2rem;
+    padding: 2rem 1.5rem 3rem;
 }
 
 /* Week cards grid */
 .weeks-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 1.2rem;
+    gap: 1rem;
 }
 
 .week-card {
@@ -53,40 +62,43 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(233, 69, 96, 0.25);
-    border-radius: 12px;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     padding: 1.4rem 1rem;
     text-decoration: none;
-    color: #e0e0e0;
-    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    color: #333;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .week-card:hover {
-    transform: translateY(-4px);
-    background: rgba(233, 69, 96, 0.12);
-    border-color: #e94560;
+    transform: translateY(-3px);
+    border-color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .week-number {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    color: #e94560;
+    color: #111;
     line-height: 1;
 }
 
 .week-label {
-    margin-top: 0.5rem;
-    font-size: 0.95rem;
-    color: #c0c0cc;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1.5rem;
-    color: #666;
-    font-size: 0.85rem;
+    color: #bbb;
+    font-size: 0.8rem;
+    border-top: 1px solid #eee;
 }
 
 /* Week page styles */
@@ -97,38 +109,41 @@ footer {
 }
 
 .week-page h1 {
-    color: #e94560;
+    color: #111;
     margin-bottom: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .week-page .back-link {
     display: inline-block;
     margin-bottom: 1.5rem;
-    color: #a8a8b3;
+    color: #999;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: color 0.2s;
 }
 
 .week-page .back-link:hover {
-    color: #e94560;
+    color: #111;
 }
 
 .week-page .content {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(233, 69, 96, 0.2);
-    border-radius: 10px;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     padding: 1.5rem 2rem;
     line-height: 1.7;
-    font-size: 1.05rem;
+    font-size: 1rem;
+    color: #444;
 }
 
 .week-page .content a {
-    color: #e94560;
-    text-decoration: none;
+    color: #111;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .week-page .content a:hover {
-    text-decoration: underline;
+    color: #555;
 }
